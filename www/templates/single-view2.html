@@ -1,0 +1,165 @@
+<ion-view view-title="Warrants">
+
+    <ion-content class="has-header">
+        <div class="row">
+
+            <div class="col ">
+                <div class="card energized">
+                    <div class="item item-divider">
+                        <b>{{cba.name}}</b>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-50">
+                <div class="card special ">
+                    <div class="item item-divider">
+                        Acquisition Date / Vest Start
+                    </div>
+                    <div class="item item-text-wrap">
+                        <b>{{date().toUTCString()}}</b>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-50">
+                <div class="card ">
+                    <div class="item item-divider">
+                        Vest Complete
+                    </div>
+                    <div class="item item-text-wrap">
+                        <b>{{date().toUTCString()}}</b>
+                    </div>
+                </div>
+            </div></div>
+        <div class="row">
+            <div class="col col-50">
+                <div class="card ">
+                    <div class="item item-divider">
+                       Warants
+                    </div>
+                    <div class="item item-text-wrap">
+                        <b>{{'$'+cba.share}}</b>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-50">
+                <div class="card ">
+                    <div class="item item-divider">
+                        Total Warants
+                    </div>
+                    <div class="item item-text-wrap">
+                        <b>{{'$'+cba.share}}</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-50">
+                <div class="card ">
+                    <div class="item item-divider">
+                        Valuation Strike Price
+                    </div>
+                    <div class="item item-text-wrap">
+                        <b>{{'$'+cba.price}}</b>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-50">
+                <div class="card ">
+                    <div class="item item-divider">
+                        Investment (0=time investment)
+                    </div>
+                    <div class="item item-text-wrap">
+                        <b>{{'$'+cba.Invest}}</b>
+                    </div>
+                </div>
+            </div></div>
+        <div class="row">
+            <div class="col col-50">
+                <div class="card ">
+                    <div class="item item-divider">
+                        My Allocation
+                    </div>
+                    <div class="item item-text-wrap">
+                        <b>{{'$'+cba.fmv}}</b>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-50">
+                <div class="card ">
+                    <div class="item item-divider">
+                        Valuation
+                    </div>
+                    <div class="item item-text-wrap">
+                        <b>{{'$'+cba.value}}</b>
+                    </div>
+                </div>
+            </div></div>
+        <div class="row">
+            <div class="col col-50">
+                <div class="card ">
+                    <div class="item item-divider">
+                        %Up/(Down)
+                    </div>
+                    <div class="item item-text-wrap">
+                        <b>{{cba.up*100}}</b>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-50">
+                <div class="card ">
+                    <div class="item item-divider">
+                        Likely Sale/IPO Price
+                    </div>
+                    <div class="item item-text-wrap">
+                        <b>{{'$'+abc.ipo}}</b>
+                    </div>
+                </div>
+            </div></div>
+        <div class="row">
+            <div class="col col-50">
+                <div class="card special">
+                    <div class="item item-divider">
+                        Implied Valuation on Likely Sale
+                    </div>
+                    <div class="item item-text-wrap">
+                        <b>{{'$'+cba.imp}}</b>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-50">
+                <div class="card ">
+                    <div class="item item-divider">
+                        Probability of Sale/IPO in next 12 months
+                    </div>
+                    <div class="item item-text-wrap">
+                        <b>{{'$'+cba.saleipo}}</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col ">
+                <div class="card ">
+                    <div class="item item-divider">
+                        Valuation inc Probability
+                    </div>
+                    <div class="item item-text-wrap">
+                        <b>{{'$'+cba.vali}}</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        </div>
+
+
+        </div>
+        <div class="row"><div class="col"> </div></div>
+
+    </ion-content>
+</ion-view>

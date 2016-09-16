@@ -1,0 +1,39 @@
+<ion-view view-title="Shares">
+ <ion-header-bar class="bar bar-subheader bar-dark">
+     <button class="button button-icon icon ion-ios-minus-outline"
+          ng-click="data.showDelete = !data.showDelete; data.showReorder = false"></button>   <h1 class="title">Shares : Existing Companies</h1>  <button class="button" ng-click="data.showDelete = false; data.showReorder = !data.showReorder">
+            Reorder
+        </button>
+    </ion-header-bar>
+  <ion-content class="has-header has-subheader">
+      <label class="item item-input">
+          <i class="icon ion-search placeholder-icon"></i>
+          <input type="search" placeholder="Search" ng-model="movie" ng-change="searchMovieDB()">
+      </label>
+      <ion-list class="list list-inset"
+                show-delete="data.showDelete" show-reorder="data.showReorder">
+
+           <div ng-repeat="iq in companies | filter: movie">
+
+              <ion-item class="item  item-icon-right ">
+              <a href="#/app/single-view/{{$index}}" ng-click="iqq($index)" style="color: darkslategray;text-decoration: none"><b>{{iq.name}}</b>
+              <div>
+              <b>Aquition Date : {{iq.vest|date:"medium"}}</b>
+
+              </div>
+              </a>
+              <i class="icon ion-chevron-right"></i>
+
+              <ion-option-button class="button-info"
+               ui-sref="app.shares-edit({index:$index})" ng-click="edit($index)">
+              Edit
+              </ion-option-button>
+              <ion-delete-button class="ion-minus-circled"
+              ng-click="delete(iq)">
+              </ion-delete-button>
+              <ion-reorder-button class="ion-navicon" on-reorder="moveItem(iq, $fromIndex, $toIndex)"></ion-reorder-button>
+              </ion-item>
+              </div>
+      </ion-list>
+  </ion-content>
+</ion-view>

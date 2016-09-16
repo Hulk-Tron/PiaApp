@@ -1,0 +1,57 @@
+/* Empty. Add your own CSS if you like */
+ion-content{background: #F5F5F5;}
+ion-list ion-item{background: #F5F5F5;border-color:#444}
+.item-complex .item-content, .item-radio .item-content{background: #f5f5f5;}
+.menu.menu-left ion-content{background: #444;}
+ion-side-menu .item-complex .item-content,ion-side-menu .item-radio .item-content,ion-side-menu .item{background: #444;color:#fff}
+ion-side-menu ion-item.item .item-content:active,ion-side-menu ion-item.item:active,ion-side-menu ion-item.item.activated {background: #000 !important;}
+.item-complex .item-content img{display: inline-block;
+vertical-align: middle;}
+ion-nav-view  .item-content{font-size: 1.1em;}
+input::-webkit-input-placeholder {
+  color: #000;
+}
+input::-moz-placeholder {
+  color: #000;
+}
+input::-ms-input-placeholder { /* IE10+ */
+  color: #000;
+}
+.inputname{
+  border: 1px solid green;
+}
+.card{margin: 0;}
+.item-divider{background: #444;color:#fff}
+.custom.button i{display: block;height: 30px;}
+.custom.button{line-height: 30px;  }
+.tabs-striped .tabs{background: #67C07D;}
+.center{text-align: center;}
+.item-divider.stable{background: #FFC900;color:#000}
+.big{font-weight: bold;font-size: 1.3em;color:#333}
+.item.green{background: #67C07D;}
+.with-icon{position: relative;}
+.with-icon .icon{position: absolute;right:0.5em;top:40%;z-index: 11;font-size:16px;color:#67C07D}
+.card.energized .item-divider{ background: #FFC900;
+text-align: center;font-weight: bold;color:#333}
+.card.special .item-text-wrap{background: #FFF1BF;}
+a.card{text-decoration: none;display: block;}
+.card.tc{text-align: center;}
+table{margin: 0 auto;border:1px solid #eee}
+table tr{border-bottom:1px solid #ddd}
+table tr td{padding:0.5em;font-size:1.3em;}
+table tr strong{display: block;vertical-align: top;text-align: right;font-weight: normal;}
+
+table tr span{display: block;vertical-align: top;text-align: left;font-size: 0.9em}
+
+table tr.gt span{color:#67C07D}
+table tr.gt strong{font-weight: bold;}
+#date:-moz-placeholder
+{
+  color:    #FF0000;
+}
+#input-label img{
+  display:none;
+}
+#input-label:hover img{
+  display:block;
+}

@@ -1,0 +1,130 @@
+<ion-view view-title="Edit Warants">
+    <ion-header-bar class="bar bar-subheader bar-dark">
+        <h1 class="title">Edit : Warants</h1>
+    </ion-header-bar>
+    <ion-content class="has-header has-subheader">
+
+        <form ng-submit="addwar($event)">
+            <div class="list list-inset">
+                <label class="item item-input item-stacked-label">
+                    <b><span class="input-label">ENTER COMPANY</span></b>
+                    <input type="text" ng-model="warants.name" >
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <b><span>VEST COMPLETE</span></b>
+                    <input  class="inputname" type="text" ng-model="warants.vest" ng-click="openDatePicker()">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <b><span class="input-label"> ACQUISTION DATE / VEST START</span></b>
+                    <input class="inputname" type="text"  ng-model="warants.vest">
+                </label>
+
+                <label class="item item-input item-stacked-label">
+                    <b><span class="input-label">WARRANTS</span></b>
+                    <input type="text" ng-model="warants.share" >
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <b><span class="input-label">VALUATION STRIKE PRICE</span></b>
+                    <label class="item-input-wrapper">
+                        <i class="icon ion-social-usd placeholder-icon"></i>
+                        <input type="text" ng-model="warants.price" >
+                    </label>
+                </label>
+                <label class="item item-input item-stacked-label">
+
+                    <span class="input-label">INVESTMENT (0=TIME INVESTMENT</span></b>
+                    <input type="text" ng-model="warants.Invest" >
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <b><span class="input-label">MY ALLOCATION</span></b>
+                    <input type="text" ng-model="warants.fmv" >
+                </label>
+                <label class="item item-input item-stacked-label">
+
+                    <b><span class="input-label">LIKELY SALE/IPO PRICE</span></b>
+                    <input type="text" maxlength="2" ng-model="warants.ipo" >
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <b><span class="input-label">PROBEBILITY OF SALE/IPO IN NEXT 12 MONTHS</span></b>
+                    <label class="item-input-wrapper">
+                        <i class="icon placeholder-icon">% </i>
+                        <input type="text"  maxlength="2" ng-model="warants.saleipo" >
+                    </label>
+                </label>
+                <div class="row">
+                    <div class="col col-50">
+                        <div class="card ">
+                            <div class="item item-divider">
+                                Total Warants
+                            </div>
+                            <div class="item item-text-wrap">
+                                <b>{{'$'+warants.share}}</b>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-50">
+                        <div class="card ">
+                            <div class="item item-divider">
+                                Valuation
+                            </div>
+                            <div class="item item-text-wrap">
+                                <b>{{'$'+warants.value}}</b>
+                            </div>
+                        </div>
+                    </div></div>
+                <div class="row">
+                    <div class="col ">
+                        <div class="card ">
+                            <div class="item item-divider">
+                                Investment (0=time investment)
+                            </div>
+                            <div class="item item-text-wrap">
+                                <b>{{'$'+warants.Invest}}</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-50">
+                        <div class="card ">
+                            <div class="item item-divider">
+                                %Up/(Down)
+                            </div>
+                            <div class="item item-text-wrap">
+                                <b> {{warants.up+'%'}}</b>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-50">
+                        <div class="card ">
+                            <div class="item item-divider">
+                                Valuation inc Probability
+                            </div>
+                            <div class="item item-text-wrap">
+                                <b>{{'$'+warants.vali}}</b>
+                            </div>
+                        </div>
+                    </div></div>
+                <div class="row">
+                    <div class="col ">
+                        <div class="card ">
+                            <div class="item item-divider">
+                                Implied Valuation on Likely Sale
+                            </div>
+                            <div class="item item-text-wrap">
+                                <b>{{'$'+warants.imp}}</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="padding">  <button class="button  button-balanced button-block" type="submit" >
+                    Edit
+                </button></div>
+                <div class="row"><div class="col"></div></div>
+            </div>
+
+            </div>
+        </form>
+
+    </ion-content>
+</ion-view>

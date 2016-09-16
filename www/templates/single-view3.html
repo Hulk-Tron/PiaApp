@@ -1,0 +1,160 @@
+<ion-view view-title="Convertible Notes">
+
+    <ion-content class="has-header">
+        <div class="row">
+
+            <div class="col ">
+                <div class="card energized">
+                    <div class="item item-divider">
+                        <b>{{qwa.name}}</b>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-50">
+                <div class="card special ">
+                    <div class="item item-divider">
+                        ACQUISTION DATE
+                    </div>
+                    <div class="item item-text-wrap">
+                        <b>{{qwa.vest}}</b>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-50">
+                <div class="card ">
+                    <div class="item item-divider">
+                        Maturity date
+                    </div>
+                    <div class="item item-text-wrap">
+                        <b>{{qwa.vest}}</b>
+                    </div>
+                </div>
+            </div></div>
+        <div class="row">
+            <div class="col col-50">
+                <div class="card ">
+                    <div class="item item-divider">
+                        AMOUNT
+                    </div>
+                    <div class="item item-text-wrap">
+                        <b>{{'$'+qwa.share}}</b>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-50">
+                <div class="card ">
+                    <div class="item item-divider">
+                        Total Amount
+                    </div>
+                    <div class="item item-text-wrap">
+                        <b>{{'$'+qwa.share}}</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-50">
+                <div class="card ">
+                    <div class="item item-divider">
+                        Annual intrest rate
+                    </div>
+                    <div class="item item-text-wrap">
+                        <b>{{'$'+qwa.price}}</b>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-50">
+                <div class="card ">
+                    <div class="item item-divider">
+                        Cap at investment
+                    </div>
+                    <div class="item item-text-wrap">
+                        <b>{{'$'+qwa.Invest}}</b>
+                    </div>
+                </div>
+            </div></div>
+        <div class="row">
+            <div class="col col-50">
+                <div class="card ">
+                    <div class="item item-divider">
+                        Latest cap
+                    </div>
+                    <div class="item item-text-wrap">
+                        <b>{{'$'+qwa.fmv}}</b>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-50">
+                <div class="card ">
+                    <div class="item item-divider">
+                        Valuation
+                    </div>
+                    <div class="item item-text-wrap">
+                        <b>{{'$'+qwa.value}}</b>
+                    </div>
+                </div>
+            </div></div>
+        <div class="row">
+            <div class="col col-50">
+                <div class="card ">
+                    <div class="item item-divider">
+                        %Up/(Down)
+                    </div>
+                    <div class="item item-text-wrap">
+                        <b>{{qwa.up}}</b>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-50">
+                <div class="card ">
+                    <div class="item item-divider">
+                        LIKELY EQUITY VALUE
+                    </div>
+                    <div class="item item-text-wrap">
+                        <b>{{'$'+qwa.ipo}}</b>
+                    </div>
+                </div>
+            </div></div>
+        <div class="row">
+            <div class="col col-50">
+                <div class="card special">
+                    <div class="item item-divider">
+                        Implied Valuation on Likely Sale
+                    </div>
+                    <div class="item item-text-wrap">
+                        <b>{{'$'+qwa.imp}}</b>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-50">
+                <div class="card ">
+                    <div class="item item-divider">
+                        PROBEBILITY OF SALE/IPO IN NEXT 12 MONTHS
+                    </div>
+                    <div class="item item-text-wrap">
+                        <b>{{'$'+qwa.saleipo}}</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col ">
+                <div class="card ">
+                    <div class="item item-divider">
+                        Valuation inc Probability
+                    </div>
+                    <div class="item item-text-wrap">
+                        <b>{{'$'+qwa.vali}}</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <div class="row"><div class="col"> </div></div>
+    </ion-content>
+</ion-view>

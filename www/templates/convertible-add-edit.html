@@ -1,0 +1,129 @@
+<ion-view view-title="Edit Convertible">
+    <ion-header-bar class="bar bar-subheader bar-dark">
+        <h1 class="title">Edit : Convertible</h1>
+    </ion-header-bar>
+    <ion-content class="has-header has-subheader">
+        <form ng-submit="addConv($event)">
+            <div class="list list-inset">
+                <label class="item item-input item-stacked-label">
+                    <b><span class="input-label">ENTER COMPANY</span></b>
+                    <input type="text" ng-model="cno.name" >
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <b><span>VEST COMPLETE</span></b>
+                    <input class="inputname" type="text" ng-model="cno.vest" ng-click="openDatePicker()">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <b><span class="input-label"> ACQUISTION DATE / VEST START</span></b>
+                    <input class="inputname" type="text"  ng-model="cno.vest" >
+                </label>
+
+                <label class="item item-input item-stacked-label">
+                    <b><span class="input-label">AMOUNT</span></b>
+                    <input type="text"  ng-model="cno.share" >
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <b><span class="input-label">ANNUAL INTREST RATE</span></b>
+                    <label class="item-input-wrapper">
+                        <i class="icon ion-social-usd placeholder-icon"></i>
+                        <input type="text"  ng-model="cno.price" >
+                    </label>
+                </label>
+                <label class="item item-input item-stacked-label">
+
+                    <span class="input-label">CAP AT INVESTMENT</span></b>
+                    <input type="text"  ng-model="cno.Invest" >
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <b><span class="input-label">LATEST CAP</span></b>
+                    <input type="text" maxlength="20" ng-model="cno.fmv" >
+                </label>
+                <label class="item item-input item-stacked-label">
+
+                    <b><span class="input-label">LIKELY EQUITY VALUE</span></b>
+                    <input type="text"  maxlength="20" ng-model="cno.ipo" >
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <b><span class="input-label">PROBEBILITY OF SALE/IPO IN NEXT 12 MONTHS</span></b>
+                    <label class="item-input-wrapper">
+                        <i class="icon placeholder-icon">% </i>
+                        <input type="text"  maxlength="2" ng-model="cno.saleipo" >
+                    </label>
+                </label>
+                <div class="row">
+                    <div class="col col-50">
+                        <div class="card ">
+                            <div class="item item-divider">
+                                Total Amount
+                            </div>
+                            <div class="item item-text-wrap">
+                                <b>{{'$'+cno.share}}</b>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-50">
+                        <div class="card ">
+                            <div class="item item-divider">
+                                Valuation
+                            </div>
+                            <div class="item item-text-wrap">
+                                <b>{{'$'+cno.value}}</b>
+                            </div>
+                        </div>
+                    </div></div>
+                <div class="row">
+                    <div class="col ">
+                        <div class="card ">
+                            <div class="item item-divider">
+                                Investment (0=time investment)
+                            </div>
+                            <div class="item item-text-wrap">
+                                <b>{{'$'+cno.Invest}}</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-50">
+                        <div class="card ">
+                            <div class="item item-divider">
+                                %Up/(Down)
+                            </div>
+                            <div class="item item-text-wrap">
+                                <b> {{cno.up+'%'}}</b>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-50">
+                        <div class="card ">
+                            <div class="item item-divider">
+                                Valuation inc Probability
+                            </div>
+                            <div class="item item-text-wrap">
+                                <b>{{'$'+cno.vali}}</b>
+                            </div>
+                        </div>
+                    </div></div>
+                <div class="row">
+                    <div class="col ">
+                        <div class="card ">
+                            <div class="item item-divider">
+                                Implied Valuation on Likely Sale
+                            </div>
+                            <div class="item item-text-wrap">
+                                <b>{{'$'+cno.imp}}</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="padding">  <button class="button  button-balanced button-block" type="submit" >
+                    Edit
+                </button></div>
+                <div class="row"><div class="col"></div></div>
+            </div>
+
+            </div>
+        </form>
+
+    </ion-content>
+</ion-view>

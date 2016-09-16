@@ -1,0 +1,182 @@
+<ion-view view-title="Shares">
+<ion-header-bar class="bar bar-subheader bar-dark">
+<h1 class="title">Shares: Add New Company</h1>
+</ion-header-bar>
+<ion-content class="has-header has-subheader">
+
+    <form ng-submit="addcompany($event)" name="form">
+  <div class="list list-inset">
+    <label class="item item-input item-stacked-label">
+      <b><span class="input-label">ENTER COMPANY</span></b>
+        <div>
+        <span ng-show="!Company.name.length" style="color:grey">Please enter Company name!</span>
+        <span ng-show="Company.name.length" style="color: green">Its perfectly fine Go ahead</span>
+        </div>
+      <input type="text" placeholder="For eg: My company" ng-model="Company.name" required>
+    </label>
+    <label class="item item-input item-stacked-label">
+        <b><span>VEST COMPLETE</span></b>
+            <input class="date1" type="text"  placeholder="Enter date" ng-click="openDatePicker()" required ng-model="Company.vest">
+        <div>
+            <span ng-show="!Company.vest.length" style="color:grey">Please enter vest date!</span>
+            <span ng-show="Company.vest.length" style="color:green">Its perfectly fine Go ahead</span>
+        </div>
+    </label>
+      <label class="item item-input item-stacked-label">
+          <b><span class="input-label"> ACQUISTION DATE / VEST START</span></b>
+          <input class="date1" type="text"  placeholder="Enter date" ng-click="openDatePicker()" required ng-model="Company.vest">
+          <div>
+              <span ng-show="!Company.vest.length" style="color:grey">Please enter vest date!</span>
+              <span ng-show="Company.vest.length" style="color:green">Its perfectly fine Go ahead</span>
+          </div>
+      </label>
+
+    <label class="item item-input item-stacked-label">
+      <b><span class="input-label">SHARES</span></b>
+        <div>
+        <span ng-show="!Company.share.length" style="color:grey">Please enter share!</span>
+        <span ng-show="Company.share.length" style="color:green">Its perfectly fine Go ahead</span>
+        </div>
+        <input type="text" placeholder="Enter number of shares" ng-model="Company.share"  required>
+    </label>
+    <label class="item item-input item-stacked-label">
+        <b><span class="input-label">SECURITY STRIKE PRICE</span></b>
+        <div><span ng-show="!Company.price.length" style="color:grey">Please enter security strike price!</span>
+            <span ng-show="Company.price.length" style="color:green">Its perfectly fine Go ahead</span>
+        </div>
+
+      <label class="item-input-wrapper">
+          <i class="icon ion-social-usd placeholder-icon"></i>
+        <input type="text" placeholder="for eg: $1.00" ng-model="Company.price" required>
+      </label>
+    </label>
+    <label class="item item-input item-stacked-label">
+
+        <span class="input-label">INVESTMENT (0=TIME INVESTMENT</span></b>
+        <div><span ng-show="!Company.price.length" style="color:grey">Please enter investment (0=time investment)!</span>
+        <span ng-show="Company.price.length" style="color:green">Its perfectly fine Go ahead</span>
+        </div>
+        <div>{{'$'+Company.Invest}}</div>
+    </label>
+    <label class="item item-input item-stacked-label">
+        <b><span class="input-label">ENTER FMV</span></b>
+        <div>
+        <span ng-show="!Company.fmv.length" style="color:grey">Please enter fmv!</span>
+        <span ng-show="Company.fmv.length" style="color:green">Its perfectly fine Go ahead</span>
+        </div>
+        <input type="text" placeholder=" for eg: 1.0" maxlength="4" ng-model="Company.fmv" required>
+    </label>
+    <label class="item item-input item-stacked-label">
+
+      <b><span class="input-label">LIKELY SALE/IPO PRICE</span></b>
+        <div>
+            <span ng-show="!Company.ipo.length" style="color:grey">Please enter likely sale/ipo price!</span></b>
+            <!--<span ng-show="Companyhj0jo0.ipo.length.$error.required">Username is required.</span>-->
+        <span ng-show="Company.ipo.length" style="color:green">Its perfectly fine Go ahead</span></b>
+        </div>
+        <input type="text" placeholder="For eg: 10" maxlength="20" ng-model="Company.ipo" required>
+    </label>
+    <label class="item item-input item-stacked-label">
+      <b><span class="input-label">PROBEBILITY OF SALE/IPO IN NEXT 12 MONTHS</span></b>
+        <div><span ng-show="!Company.saleipo.length" style="color:grey">Please enter the probability of Sale/Ipo in next 12 months!</span>
+            <span ng-show="Company.saleipo.length" style="color:green">Its perfectly fine Go ahead</span>
+        </div>
+
+      <label class="item-input-wrapper">
+          <i class="icon placeholder-icon">% </i>
+        <input type="text" placeholder=" for eg: 30" maxlength="2" ng-model="Company.saleipo" required>
+      </label>
+    </label>
+
+    <!--<ul class="list">-->
+        <!--<b>-->
+      <!--<li class="item item-toggle">-->
+        <!--SHOW CALCULATIONS BELOW-->
+        <!--<label class="toggle toggle-balanced">-->
+         <!--<input type="checkbox">-->
+          <!--<div class="track">-->
+            <!--<div class="handle"></div>-->
+          <!--</div>-->
+        <!--</label>-->
+      <!--</li></b>-->
+    <!--</ul>-->
+      <!--<div>-->
+<div class="row">
+      <div class="col col-50">
+        <div class="card ">
+        <div class="item item-divider">
+          Total shares
+        </div>
+        <div class="item item-text-wrap">
+          <b>{{'$'+Company.share}}</b>
+        </div>
+      </div>
+    </div>
+      <div class="col col-50">
+        <div class="card ">
+        <div class="item item-divider">
+         Valuation
+        </div>
+        <div class="item item-text-wrap">
+          <b>{{'$'+Company.value}}</b>
+        </div>
+      </div>
+    </div></div>
+    <div class="row">
+        <div class="col ">
+        <div class="card ">
+        <div class="item item-divider">
+         Investment (0=time investment)
+        </div>
+        <div class="item item-text-wrap">
+          <b>{{'$'+Company.Invest}}</b>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col col-50">
+        <div class="card ">
+        <div class="item item-divider">
+          %Up/(Down)
+        </div>
+        <div class="item item-text-wrap">
+        <b> {{Company.up+'%'}}</b>
+        </div>
+      </div>
+    </div>
+      <div class="col col-50">
+        <div class="card ">
+        <div class="item item-divider">
+        Valuation inc Probability
+        </div>
+        <div class="item item-text-wrap">
+          <b>{{'$'+Company.vali}}</b>
+        </div>
+      </div>
+    </div></div>
+    <div class="row">
+        <div class="col ">
+        <div class="card ">
+        <div class="item item-divider">
+        Implied Valuation on Likely Sale
+        </div>
+        <div class="item item-text-wrap">
+          <b>{{'$'+Company.imp}}</b>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+    <div class="padding">  <button class="button  button-balanced button-block" type="submit" >
+         Save
+    </button></div>
+     <div class="row"><div class="col"></div></div>
+</div>
+
+  </div>
+</form>
+
+</ion-content>
+</ion-view>

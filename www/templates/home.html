@@ -1,0 +1,146 @@
+<ion-view view-title="PIA Summary">
+
+<ion-content class="has-header">
+<div class="row">
+    <div class="col">
+        <div class="card ">
+            <div class="item item-divider center stable">
+                Grand Total
+            </div>
+
+  <label class="item item-input item-select">
+    <div class="input-label">
+Show Summary
+    </div>
+    <select>
+             <option>All</option>
+                <option>Shares</option>
+        <option>Options</option>
+          <option>Warrants</option>
+            <option>Convertible Notes</option>
+    </select>
+  </label>
+
+            <div class="item item-text-wrap">
+                <div class="row">
+                    <div class="col">
+                        <a class="card " href="#/app/summary-details">
+                            <div class="item item-divider center">
+                                Capital Deployed
+                            </div>
+                            <div class="item item-text-wrap center big  with-icon">
+                                {{'$'+capitalDeployment()}}
+                                    <i class="icon ion-chevron-right"></i>
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card ">
+                            <a class="card " href="#/app/summary-details1">
+                            <div class="item item-divider center">
+                                Current Valuation
+                            </div>
+                            <div class="item item-text-wrap center with-icon">
+                              <div class="row">
+                    <div class="col col-50 big">{{'$'+CurrentValuation()}}</div>
+                    <div class="col col-50">  <div class="card ">
+                            <div class="item item-divider center green">
+                               Returns
+                            </div>
+                            <div class="item item-text-wrap center big">
+                               {{return1()+'%'}}
+                            </div>
+                        </div></div></div>
+ <i class="icon ion-chevron-right"></i>
+                            </div>
+                                </a>
+                        </div>
+                    </div>
+                </div>
+                  <div class="row">
+                    <div class="col">
+                        <div class="card ">
+                            <a class="card " href="#/app/summary-details2">
+                            <div class="item item-divider center">
+                                Future Valuation
+(Full vest)
+                            </div>
+                            <div class="item item-text-wrap center with-icon">
+                              <div class="row">
+                    <div class="col col-50 big">{{'$'+FutureValuation()}}</div>
+                    <div class="col col-50">  <div class="card ">
+                            <div class="item item-divider center green">
+                               Returns
+                            </div>
+                            <div class="item item-text-wrap center big">
+                              {{return2()+'%'}}
+                            </div>
+                        </div></div></div>
+ <i class="icon ion-chevron-right"></i>
+                            </div>
+                        </a>
+                        </div>
+
+                    </div>
+                </div>
+                 <div class="row">
+                    <div class="col">
+                        <div class="card ">
+                            <a class="card " href="#/app/summary-details2">
+                            <div class="item item-divider center">
+                               Future incl
+Probability
+                            </div>
+                            <div class="item item-text-wrap center with-icon">
+                              <div class="row">
+
+                    <div class="col col-50 big">{{'$'+FutureValuation()}}</div>
+                    <div class="col col-50">  <div class="card ">
+                            <div class="item item-divider center green">
+                               Returns
+                            </div>
+                            <div class="item item-text-wrap center big">
+                                {{return3()+'%'}}
+                            </div>
+                        </div></div></div>
+ <i class="icon ion-chevron-right"></i>
+                            </div>
+                                </a>
+                        </div>
+                    </div>
+                </div>
+ <div class="row">
+                    <div class="col">
+                        <div class="card ">
+                            <a class="card " href="#/app/summary-details3">
+                            <div class="item item-divider center">
+                                Future Best
+Case
+                            </div>
+                            <div class="item item-text-wrap center with-icon">
+                              <div class="row">
+                    <div class="col col-50 big">{{'$'+FutureBest()}}</div>
+                    <div class="col col-50">  <div class="card ">
+                            <div class="item item-divider center green">
+                               Returns
+                            </div>
+                            <div class="item item-text-wrap center big">
+                                {{return4()+'%'}}
+                            </div>
+                        </div></div></div>
+ <i class="icon ion-chevron-right"></i>
+                            </div>
+                                </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</ion-content>
+</ion-view>
